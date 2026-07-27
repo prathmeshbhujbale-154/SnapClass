@@ -1,6 +1,6 @@
 import streamlit as st
 
-def style_backround_home():
+def style_background_home():
     
     st.markdown("""
         <style>
@@ -10,11 +10,12 @@ def style_backround_home():
 
                 .stApp div[data-testid="stColumn"] {
                 background-color:#E0E3FF !important;
-                padding:2.5rem !impotant;
-                Border-radius: 5rem !important;
+                padding:2.5rem !important;
+                border-radius: 5rem !important;
                 }
         </style>
-""", unsafe_allow_html=True)
+                """
+            , unsafe_allow_html=True)
 
 def style_background_dashboard():
     
@@ -24,7 +25,8 @@ def style_background_dashboard():
                 background: #E0E3FF !important;
                 }
         </style>
-""", unsafe_allow_html=True)
+                """
+            , unsafe_allow_html=True)
 
 def style_base_layout():
     
@@ -39,7 +41,7 @@ def style_base_layout():
             }
             
             .block-container {
-                padding-top=1.5rem !important
+                padding-top: 1.5rem !important
             }
 
             h1 {
@@ -87,4 +89,5 @@ def style_base_layout():
                 }
 
         </style>
-""", unsafe_allow_html=True)
+                """
+            , unsafe_allow_html=True)
