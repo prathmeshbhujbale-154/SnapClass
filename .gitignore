@@ -5,9 +5,9 @@
 .bs_store
 __pychache__/
 
-venv
+venv/
 
-.streamlit
+.streamlit/
 
 
 dist/
