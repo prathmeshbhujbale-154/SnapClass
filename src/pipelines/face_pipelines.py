@@ -8,7 +8,7 @@ import streamlit as st
 
 from src.database.db import get_All_students
 
-@st.cache_resource
+@st.cache_resource   #load only one time for less memory usage
 def load_dlib_models():
     detector =  dlib.get_frontal_dace_detector()
 
@@ -33,7 +33,7 @@ def get_face_embeddings(image_np):
 
     for face in faces:
         shape = sp(image_np, face)
-        face_descriptor= facerec.compute_face_descripto(image_np, shape, 1) #128 embeddings
+        face_descriptor= facerec.compute_face_descriptor(image_np, shape, 1) #128 embeddings
 
         encodings.append(np.array(face_descriptor))
 
@@ -42,8 +42,8 @@ def get_face_embeddings(image_np):
 @st.cache_resource
 def get_trained_model():
 
-    x = []
-    y = []
+    x = []  #embeddings of students 
+    y = []  #ids of students
 
     students_db = get_All_students()
 
