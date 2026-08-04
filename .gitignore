@@ -5,7 +5,7 @@
 .bs_store
 __pychache__/
 
-venv/
+venv311/
 
 .streamlit/
 
