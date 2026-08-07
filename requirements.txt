@@ -3,7 +3,7 @@ pandas
 
 scikit-learn
 dlib-bin
-face_recognition
+
 
 supabase
 bcrypt
@@ -20,3 +20,6 @@ resemblyzer
 setuptools<70
 
 git+https://github.com/ageitgey/face_recognition_models
+webrtcvad-wheels
+
+face_recognition_models

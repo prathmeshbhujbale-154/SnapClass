@@ -6,11 +6,11 @@ import face_recognition_models
 from sklearn.svm import SVC
 import streamlit as st
 
-from src.database.db import get_All_students
+from src.database.db import get_all_students
 
 @st.cache_resource   #load only one time for less memory usage
 def load_dlib_models():
-    detector =  dlib.get_frontal_dace_detector()
+    detector =  dlib.get_frontal_face_detector()
 
 
     sp = dlib.shape_predictor(
@@ -45,7 +45,7 @@ def get_trained_model():
     x = []  #embeddings of students 
     y = []  #ids of students
 
-    students_db = get_All_students()
+    students_db = get_all_students()
 
     if not students_db:
         return None
