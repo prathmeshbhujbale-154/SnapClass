@@ -54,7 +54,7 @@ def get_trained_model():
         embedding= student.get('face_embedding')
         if embedding:
             x.append(np.array(embedding))
-            y.append(student.get('student_id'))
+            y.append(student.get('student_id')) 
 
     if len(x) == 0:
         return 0
@@ -104,4 +104,4 @@ def predict_attendance(class_image_np):
         if best_match_score <=  resemblance_threshold:
             detected_student[predicted_id] =  True
 
-    return detected_student, all_students,  len(encoding)
+    return detected_student, all_students,  len(encodings)
