@@ -71,7 +71,7 @@ def unenroll_subject_to_Student(student_id, subject_id):
     return response.data
 
 def get_student_subject(student_id):
-    response = supabase.table('subject_Students').select("*, subjects(*)").eq('student_id', student_id).execute()
+    response = supabase.table('subject_students').select("*, subjects(*)").eq('student_id', student_id).execute()
     return response.data
 
 def get_student_attendance(student_id):
