@@ -36,9 +36,9 @@ def style_base_layout():
         @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Outfit:wght@100..900&display=swap');
 
             /* hide top bar of streamlit*/
-          #  #MainMenu, footer, header {
-           #     visibility: hidden;
-           # }
+            #MainMenu, footer, header {
+                visibility: hidden;
+            }
             
             .block-container {
                 padding-top: 1.5rem !important
