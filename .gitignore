@@ -44,3 +44,11 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.log
+venv/
+venv311/
+.venv/
+__pycache__/
+*.pyc
+.env
+.streamlit/secrets.toml
+.vscode/
