@@ -10,7 +10,7 @@ from src.components.dialog_share_subject import share_subject_dialog
 from src.components.dialog_add_photo import add_photos_dialog
 from src.components.dialog_attendance_results import attendance_result_dialog
 from src.pipelines.face_pipelines import predict_attendance
-
+from src. components.dialog_voice_attendance import voice_attendance_dialog
 
 import numpy as  np
 import pandas as pd
@@ -86,6 +86,7 @@ def teacher_dashboard():
     footer_dashboard()
 
 def teacher_tab_take_attendance():
+
     teacher_id = st.session_state.teacher_data['teacher_id']
     st.header("Take Attendance")
 
@@ -154,7 +155,6 @@ def teacher_tab_take_attendance():
                 else:
 
                     results, attendance_to_log = [], []
-
                     current_timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 
 
@@ -179,7 +179,7 @@ def teacher_tab_take_attendance():
 
                     attendance_result_dialog(pd.DataFrame(results), attendance_to_log)
     with c3:
-        if st.button("Use Voice Attendance", type="primary", width="stretch", icon=':material/mic:', disabled = not has_photos):
+        if st.button("Use Voice Attendance", type="primary", width="stretch", icon=':material/mic:'):
             voice_attendance_dialog(selected_subject_id)
 
 def teacher_tab_manage_subjects():
