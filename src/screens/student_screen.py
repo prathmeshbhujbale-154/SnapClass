@@ -60,7 +60,7 @@ def student_dashboard():
         sub = sub_node['subjects']
         sid = sub['subject_id']
 
-        stats = stats_map.get(sid,{"total":0, "attended":0})
+        stats = stats_map.get(sid,{"total":0, "attendance":0})
         def unenroll_button():
             if st.button("Unenroll from this course", type="tertiary", width="stretch", icon=':material/delete_forever:'):
                 unenroll_subject_to_Student(student_id, sid)
@@ -75,7 +75,7 @@ def student_dashboard():
                 section = sub['section'],
                 stats = [
                     ('🗓️', "Total", stats["total"]),
-                    ('✅', "Attended", stats["attended"])
+                    ('✅', "Attended", stats["attendance"])
                 ],
                 footer_callback=unenroll_button
             )
