@@ -60,7 +60,7 @@ def style_base_layout():
             h1 {
                 font-family: 'Climate Crisis', sans-serif !important;
                 font-size: 3.5rem !important;
-                line-height:1.1 1important;
+                line-height:1.1 !important;
                 margin-bottom:0rem !important;
             }
                 
@@ -76,7 +76,28 @@ def style_base_layout():
                 font-family: 'Outfit', sans-serif;    
             }
                 
+            .stTextInput input {
+                background-color: #FFFFFF !important;
+                color: #000000 !important;
+            }
 
+            .stTextInput input::placeholder {
+                color: #777777 !important;
+                opacity: 1 !important;
+            }
+
+            .stTextInput label {
+                color: #000000 !important;
+            }
+
+
+            button {
+                border-radius: 1.5rem !important;
+                background-color: #5865F2 !important;
+                color: white !important;
+                padding: 10px 20px !important;
+                border: none !important;
+            }
             button{
                 border-radius: 1.5rem !important;
                 background-color: #5865F2 !important;
