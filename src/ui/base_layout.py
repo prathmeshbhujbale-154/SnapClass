@@ -76,20 +76,34 @@ def style_base_layout():
                 font-family: 'Outfit', sans-serif;    
             }
                 
-            .stTextInput input {
+
+            div[data-testid="stTextInput"] div[data-baseweb="input"] {
                 background-color: #FFFFFF !important;
-                color: #000000 !important;
+                border-radius: 0.7rem !important;
+                border: 1px solid #CCCCCC !important;
             }
 
-            .stTextInput input::placeholder {
+            div[data-testid="stTextInput"] div[data-baseweb="base-input"] {
+                background-color: #FFFFFF !important;
+            }
+
+            div[data-testid="stTextInput"] input {
+                background-color: #FFFFFF !important;
+                color: #000000 !important;
+                -webkit-text-fill-color: #000000 !important;
+            }
+
+            /* Placeholder */
+            div[data-testid="stTextInput"] input::placeholder {
                 color: #777777 !important;
                 opacity: 1 !important;
             }
 
-            .stTextInput label {
-                color: #000000 !important;
+            /* Password eye button */
+            div[data-testid="stTextInput"] button {
+                background-color: #5865F2 !important;
+                color: #FFFFFF !important;
             }
-
 
             button {
                 border-radius: 1.5rem !important;
