@@ -70,14 +70,6 @@ def style_base_layout():
                 font-size: 2rem !important;
                 line-height:0.9 !important;
                 margin-bottom:0rem !important;
-            }
-            .main-h2{
-                font-family: 'Climate Crisis', sans-serif !important;
-                font-size: 2rem !important;
-                line-height:0.9 !important;
-                margin-bottom:0rem !important;
-                color: black !important
-
             }  
             h3, h4, p {
                 font-family: 'Outfit', sans-serif;   
